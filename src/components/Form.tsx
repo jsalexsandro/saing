@@ -2,16 +2,19 @@ import { ArrowCircleDown } from "phosphor-react";
 
 export function Form(){
   return ( 
-    <section className="w-full bg-white font-extrabold flex items-center flex-col gap-7 justify-center h-64">
+    <section className="w-full bg-white font-extrabold flex items-center flex-col gap-7 justify-center h-72">
       <div className="w-full h-auto">
         <h1 className="text-4xl text-center text-violet-500">
             <span className="opacity-80">Download videos from</span> <span className="opacity-100">Youtube</span>
         </h1>
       </div>
-      <div className="flex items-center justify-center gap-2">
-        <input placeholder="Cut Link " className="focus:border-violet-700 placeholder:text-violet-500  h-14 w-[545px] max-sm:w-[270px] text-xl text-violet-500 font-normal border border-violet-500 indent-2 rounded outline-none"  />
-        <button className="hover:bg-violet-700 w-14 h-14 bg-violet-500 rounded flex items-center justify-center">
-          <ArrowCircleDown weight="fill" id="icon" className="text-white" size={32} />
+      <div className="flex items-center justify-center flex-col gap-1">
+        <input placeholder="Cut Url" className="sm:w-[600px] placeholder:text-violet-500 focus:border-violet-700 font-medium text-violet-500 w-[calc(100vw_-_32px)] outline-none indent-3 h-14 rounded bg-violet-50 border border-violet-500" />
+        <button className="sm:w-[600px] hover:bg-violet-700 text-lg w-[calc(100vw_-_32px)] h-14 rounded bg-violet-500 flex items-center justify-between">
+          <p className="px-3 text-slate-100"> Donwload </p>
+          <div className="flex items-center justify-center px-3">
+            <ArrowCircleDown size={32} className="text-slate-100" />
+          </div>
         </button>
       </div>
     </section>
