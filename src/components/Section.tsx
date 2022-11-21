@@ -3,7 +3,7 @@ import { Gear } from "phosphor-react";
 export function Section(){
   return (
     <section className="flex items-center justify-center flex-wrap">
-      <article className="px-2 py-1 block ">
+      <article className="px-4 py-1 block">
         <h2 className="text-violet-500 font-extrabold text-xl">
           How to using?
         </h2>
@@ -13,15 +13,17 @@ export function Section(){
           The video will download automatically!
         </p>
       </article> 
-      <article>
-        <div>
-          <Gear />
-          <h2>
+      <article className="px-4 py-1 block">
+        <div className="flex items-center gap-2">
+          <Gear size={24} weight="fill" className="text-violet-500" />
+          <h2 className="text-xl font-extrabold text-violet-500">
             About Api
           </h2>
         </div>
-        <div>
-          click me, for seeing documentation on howing use code api.
+        <div className="py-2">
+          <p className="text-violet-500 opacity-95">
+            click me, for seeing documentation on howing use code api.
+          </p>
         </div>
       </article> 
     </section>
