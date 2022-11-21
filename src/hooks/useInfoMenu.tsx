@@ -10,7 +10,7 @@ export type MenuInfo = {
 
 const ContextMenu = createContext({ } as MenuInfo);
 
-export const MenuInfoProvider= ({ children }:{ children:ReactElement }) => {
+export const MenuInfoProvider= ({ children }: any ) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
