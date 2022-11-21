@@ -1,4 +1,4 @@
-import { createContext, ReactElement, useState, useContext } from "react";
+import { createContext, useState, useContext } from "react";
 import { AnimateButton } from "../scripts/AnimateButtons";
 
 export type MenuInfo = {
