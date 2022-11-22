@@ -8,7 +8,7 @@ export function Menu(){
   }
 
   return (
-    <menu className="sm:hidden bg-violet-500 border-b-2 border-violet-900">
+    <menu className="sm:hidden bg-violet-500 border-b-2 border-violet-600">
       <div>
         <ul className="text-lg text-slate-100">
           <li className="px-4 py-1">

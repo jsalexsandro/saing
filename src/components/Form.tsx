@@ -9,7 +9,7 @@ export function Form(){
         </h1>
       </div>
       <div className="flex items-center justify-center flex-col gap-1">
-        <input placeholder="Cut Url" className="sm:w-[600px] placeholder:text-violet-500 focus:border-violet-700 font-medium text-violet-500 w-[calc(100vw_-_32px)] outline-none indent-3 h-14 rounded bg-violet-50 border border-violet-500" />
+        <input placeholder="Cut Url" className="sm:w-[600px] placeholder:text-violet-500 focus:border-violet-700 font-medium text-violet-500 w-[calc(100vw_-_32px)] outline-none indent-3 h-14 rounded border border-violet-500" />
         <button className="sm:w-[600px] hover:bg-violet-700 text-lg w-[calc(100vw_-_32px)] h-14 rounded bg-violet-500 flex items-center justify-between">
           <p className="px-3 text-slate-100"> Donwload </p>
           <div className="flex items-center justify-center px-3">
