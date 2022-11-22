@@ -2,7 +2,7 @@ import { Gear } from "phosphor-react";
 
 export function Section(){
   return (
-    <section className="max-sm:flex items-center justify-center flex-wrap py-8">
+    <section className="max-sm:flex w-full h-auto items-center justify-center py-8 flex-wrap">
       <article className="px-4 py-1 block">
         <h2 className="sm:text-center text-violet-500 font-extrabold text-xl">
           How to using?
