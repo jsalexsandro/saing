@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { XCircle } from "phosphor-react"
-import youtubeThumb from "youtube-thumbnail";
 import Image from "next/image";
 import { YoutubeListBox } from "./YoutubeListBox";
+import { GetThumbURL } from "../scripts/ThumbURL";
 
 type PopoverProps = {
   modalIsOpoen:boolean
@@ -17,8 +17,8 @@ export function Popover(props:PopoverProps){
 
 
   useEffect(() => {
-    const data = youtubeThumb(url)
-    setThumbnailUrl(data.high.url)
+    const data = GetThumbURL(url)
+    setThumbnailUrl(data)
   })
 
   
@@ -30,7 +30,7 @@ export function Popover(props:PopoverProps){
             Save Video
           </h2>
           <div className="flex">
-            <button onClick={closeOrOpen}>
+            <button onClick={ () => closeOrOpen() }>
               <XCircle size={32} />
             </button>
           </div>
