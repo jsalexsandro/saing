@@ -2,13 +2,15 @@ import { useState, useRef, ReactElement, Fragment } from "react";
 import { ArrowCircleDown } from "phosphor-react";
 import { RotateButton } from "../scripts/RotateButton";
 import { Popover} from "./Popover";
+import { useDownload } from "../hooks/useDownlaod";
 
 export function Form(){
   const [isRotate, setRotate] = useState<boolean>(false)
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
   const [url, setUrl] = useState<string>("")
   const inputRef = useRef<HTMLInputElement>(null)
-
+  const { type, downloadType, title  } = useDownload()
+  
   function closeOrOpen(){
     setModalIsOpen(!modalIsOpen)
   }
@@ -27,7 +29,7 @@ export function Form(){
       <section className="w-full bg-white font-extrabold flex items-center flex-col gap-7 justify-center h-72">
         <div className="w-full h-auto">
           <h1 className="text-4xl text-center text-violet-500">
-              <span className="opacity-80">Download videos from</span> <span className="opacity-100">Youtube</span>
+              <span className="opacity-80">Download { downloadType.toLocaleLowerCase() } from</span> <span className="opacity-100">{ title }</span>
           </h1>
         </div>
         <div className="flex items-center justify-center flex-col gap-1">
