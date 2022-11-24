@@ -1,6 +1,8 @@
-export const RotateButton = (is:boolean, set:(value:any) => any) => {
+
+export const RotateButton = async (is:boolean, set:(value:any) => any) => {
   const icon = document.getElementById('icon') as HTMLDivElement;
   const time = 400 // time in milliseconds
+
 
   if (is == false){
     icon.style.transition = `${time}ms`
