@@ -4,7 +4,6 @@ import { ListBox } from "./ListBox";
 import { GetThumbURL } from "../scripts/ThumbURL";
 import { useDownload } from "../hooks/useDownlaod";
 import { Option } from "../types/Option";
-import { toast, ToastContainer } from "react-toastify";
 
 type PopoverProps = {
   modalIsOpoen:boolean
@@ -69,7 +68,7 @@ export function Popover(props:PopoverProps){
           <p className="font-bold">
             Downlaod Started
           </p>
-          <div onClick={() => { setStart(false), clearInterval() }}>
+          <div onClick={() => { setStart(false) }}>
             <XCircle size={32} />
           </div>
         </div>}
