@@ -26,7 +26,7 @@ export function Header(){
         </nav>
       </div>
 
-      {/* 44 meio extato */}
+      {/* 44 center */}
 
       <div onClick={ MenuFunction } className="sm:hidden">
         <button className="w-24 h-24 flex flex-col gap-3 items-center justify-center">

@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react"
-import { XCircle } from "phosphor-react"
+import { ArrowCircleDown, XCircle } from "phosphor-react"
 import { ListBox } from "./ListBox";
 import { GetThumbURL } from "../scripts/ThumbURL";
 import { useDownload } from "../hooks/useDownlaod";
 import { Option } from "../types/Option";
+import { RotateButton } from "../scripts/RotateButton"
 
-type PopoverProps = {
-  modalIsOpoen:boolean
+type DownloadProps = {
+  modalIsOpen:boolean
   closeOrOpen:Function
   url:string
 }
 
-export function Popover(props:PopoverProps){
-  const { type, downloadType, title  } = useDownload()
-  const { modalIsOpoen, closeOrOpen, url } = props
+export function Donwloader(props:DownloadProps){
+  const { type } = useDownload()
+  const { closeOrOpen, url } = props
   const [thumbnailUrl, setThumbnailUrl] = useState("")
+  const [rotate, setRotate] = useState(false)
   const origin = document.location.origin
-  const [isStart, setStart] = useState(false)
+
 
   let option:Option[] = []
 
@@ -29,15 +31,17 @@ export function Popover(props:PopoverProps){
     if (type == "youtube-video") {
       const callApi = `${origin}/api/youtube-video-download/?url=${url}&quality=${selectedOption.name}`
       console.log(callApi)
-      setStart(true)
       location.assign(callApi)
-      setTimeout(() => setStart(false), 5000)
     }
+
+    RotateButton(rotate, setRotate)
   }
 
   useEffect(() => {
-    const data = GetThumbURL(url)
-    setThumbnailUrl(data)
+    if (type == "youtube-video") {
+      const data = GetThumbURL(url)
+      setThumbnailUrl(data)
+    }
   })
   
   return (
@@ -60,18 +64,13 @@ export function Popover(props:PopoverProps){
           <ListBox option={option} selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
         </div>
         <div>
-          <button onClick={ Download } className="hover:bg-violet-800 rounded w-full text-left mt-2 py-3 bg-violet-700 px-2 text-zinc-100 font-bold">
-            Downlaod
+          <button onClick={ Download } className="hover:bg-violet-800  flex items-center justify-between rounded w-full text-left mt-2 py-3 bg-violet-700 px-2 text-zinc-100 font-bold">
+            <p>Downlaod</p>
+            <div id="icon" className="flex items-center justify-center">
+              <ArrowCircleDown size={32} className="text-slate-100" />
+            </div>
           </button>
         </div>
-        {isStart && <div className="absolute w-64 flex items-center justify-between right-2 top-2 bg-violet-900 mt-2 px-2 py-3 rounded text-zinc-100">
-          <p className="font-bold">
-            Downlaod Started
-          </p>
-          <div onClick={() => { setStart(false) }}>
-            <XCircle size={32} />
-          </div>
-        </div>}
       </div>
     </section>
   )

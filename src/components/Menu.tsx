@@ -3,9 +3,7 @@ import { useMenuInfo } from "../hooks/useInfoMenu"
 export function Menu(){
   const { isOpen } = useMenuInfo()
 
-  if (!isOpen){
-    return <></>
-  }
+  if (!isOpen) return null
 
   return (
     <menu className="sm:hidden bg-violet-500 border-b-2 border-violet-600">
