@@ -4,7 +4,7 @@ export function Footer(){
   const year = new Date().getFullYear(); // year 
 
   return (
-    <footer className="sm:items-center w-full h-auto text-slate-100 bg-violet-500 flex flex-col p-4">
+    <footer className="sm:items-center w-full h-auto text-slate-100 bg-emerald-500 flex flex-col p-4">
       <div className="sm:w-[600px]">
         <div className="flex items-center justify-between py-1">
           <p >
