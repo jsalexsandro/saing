@@ -1,6 +1,22 @@
 export function GetThumbURL(url:string) {
+  const video = url.split(/[(\W)]/)
+  let   outherUrlDetected = false
+  let   name = ""
 
-  const video = url.split('/')[3]
-  console.log(url.split('/'))
-  return 'http://img.youtube.com/vi/' + video + '/0.jpg';
+  for (var value of video) { // Try get the url image from url of video not shared
+    if (value == "v"){
+      outherUrlDetected = true
+    } else {
+      if (outherUrlDetected){
+        name = value
+        break
+      }
+    }
+  }
+
+  if (!outherUrlDetected){ // Try get the url shared
+    name = url.split("/")[3]
+  }
+
+  return 'http://img.youtube.com/vi/' + name + '/0.jpg';
 };

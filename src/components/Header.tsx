@@ -4,26 +4,28 @@ export function Header(){
   const { set: MenuFunction } = useMenuInfo()
 
   return (
-    <header className="w-full h-24 flex items-center justify-around bg-emerald-500">
-      <div className="max-sm:hidden">
-        <h1 className="text-2xl text-slate-100">
-          SAING.NET
-        </h1>
-      </div>
-      <div className="max-sm:hidden">
-        <nav>
-          <ul className="w-auto text-slate-100 flex transition-colors text-lg items-center justify-center gap-4 flex-ro">
-            <li className="hover:text-slate-300">
-              <a href="#">MORE</a>
-            </li>
-            <li className="hover:text-slate-300">
-              <a href="#">GITHUB</a>
-            </li>
-            <li className="hover:text-slate-300">
-              <a href="#">DOCUMENTATION</a>
-            </li>
-          </ul>
-        </nav>
+    <header className="w-full h-24 flex items-center justify-center bg-emerald-500">
+      <div className="max-sm:hidden w-[600px] flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl text-slate-100">
+            SAING.NET
+          </h1>
+        </div>
+        <div>
+          <nav>
+            <ul  className="flex flex-rol gap-4 text-zinc-100">
+              <li className="hover:text-slate-300">
+                <a href="#">MORE</a>
+              </li>
+              <li className="hover:text-slate-300">
+                <a href="#">GITHUB</a>
+              </li>
+              <li className="hover:text-slate-300">
+                <a href="#">DOCUMENTATION</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       {/* 44 center */}
