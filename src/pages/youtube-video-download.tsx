@@ -14,7 +14,7 @@ const downloadType:DownlaodType = {
   title:"Youtube"
 }
 
-export default function Index(){
+export default function YoutubeVideoDonwload(){
   return (
     <DownloadContext.Provider value={ downloadType }>
       <Fragment>
