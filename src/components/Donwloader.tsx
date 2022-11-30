@@ -47,8 +47,8 @@ export function Donwloader(props:DownloadProps){
   
   return (
     <section className="flex items-center justify-center top-0 fixed z-10 w-full h-full bg-black backdrop-filter backdrop-blur-sm bg-opacity-30">
-      <div className="sm:w-[550px] p-4 w-[calc(100vw_-_50px)] bg-emerald-500 rounded">
-        <div className="text-emerald-100 py-4 flex h-8 items-center justify-between">
+      <div className="sm:w-[550px] p-4 w-[calc(100vw_-_50px)] bg-marine-500 rounded">
+        <div className="text-marine-100 py-4 flex h-8 items-center justify-between">
           <h2 className="text-md font-medium">
             Save Video
           </h2>
@@ -65,7 +65,7 @@ export function Donwloader(props:DownloadProps){
           <ListBox option={option} selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
         </div>
         <div>
-          <button onClick={ Download } className="hover:bg-emerald-800  flex items-center justify-between rounded w-full text-left mt-2 py-3 bg-emerald-700 px-2 text-emerald-100 font-bold">
+          <button onClick={ Download } className="hover:bg-marine-800  flex items-center justify-between rounded w-full text-left mt-2 py-3 bg-marine-700 px-2 text-marine-100 font-bold">
             <p>Downlaod</p>
             <div id="icon" className="flex items-center justify-center">
               <ArrowCircleDown size={32} className="text-slate-100" />

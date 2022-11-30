@@ -16,18 +16,18 @@ export default function Index(){
     title:"Youtube"
   }
   return (
-      <DownloadContext.Provider value={ downloadType }>
-        <Fragment>
-          <MenuInfoProvider>
-            <Header/>
-            <Menu/>
-          </MenuInfoProvider>
-          <main className="w-full h-auto  bg-gray-100">
-            <Form/>
-            <Section />
-          </main>
-          <Footer/>
-        </Fragment>
-      </DownloadContext.Provider>
+    <DownloadContext.Provider value={ downloadType }>
+      <Fragment>
+        <MenuInfoProvider>
+          <Header/>
+          <Menu/>
+        </MenuInfoProvider>
+        <main className="w-full h-auto  bg-gray-100">
+          <Form/>
+          <Section />
+        </main>
+        <Footer/>
+      </Fragment>
+    </DownloadContext.Provider>
   )
 }

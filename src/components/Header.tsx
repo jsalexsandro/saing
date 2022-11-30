@@ -4,7 +4,7 @@ export function Header(){
   const { set: MenuFunction } = useMenuInfo()
 
   return (
-    <header className="w-full h-24 flex items-center justify-center bg-emerald-500">
+    <header className="w-full h-24 flex items-center justify-center bg-marine-500">
       <div className="max-sm:hidden w-[600px] flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-slate-100">
