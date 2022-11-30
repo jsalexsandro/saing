@@ -12,7 +12,7 @@ export default function Index(){
 
   const downloadType:DownlaodType = {
     type: "youtube-video",
-    downloadType: "video",
+    downloadType: "vídeos",
     title:"Youtube"
   }
   return (

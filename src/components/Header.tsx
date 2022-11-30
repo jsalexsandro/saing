@@ -15,13 +15,13 @@ export function Header(){
           <nav>
             <ul  className="flex flex-rol gap-4 text-zinc-100">
               <li className="hover:text-slate-300">
-                <a href="#">MORE</a>
+                <a href="#">MAIS</a>
               </li>
               <li className="hover:text-slate-300">
                 <a href="#">GITHUB</a>
               </li>
               <li className="hover:text-slate-300">
-                <a href="#">DOCUMENTATION</a>
+                <a href="#">COMO USAR</a>
               </li>
             </ul>
           </nav>

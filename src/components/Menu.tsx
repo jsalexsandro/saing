@@ -10,13 +10,13 @@ export function Menu(){
       <div>
         <ul className="text-lg text-slate-100">
           <li className="px-4 py-1">
-            <a href="#" className="hover:text-slate-300 transition-colors">More</a>
+            <a href="#" className="hover:text-slate-300 transition-colors">Mais</a>
           </li>
           <li className="px-4 py-1">
             <a href="#" className="hover:text-slate-300 transition-colors">Github</a>
           </li>
           <li className="px-4 py-1">
-            <a href="#" className="hover:text-slate-300 transition-colors">Documetation</a>
+            <a href="#" className="hover:text-slate-300 transition-colors">Como usar</a>
           </li>
         </ul>
       </div>

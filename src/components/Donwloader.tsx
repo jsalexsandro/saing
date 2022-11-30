@@ -24,15 +24,15 @@ export function Donwloader(props:DownloadProps){
   let option:Option[] = []
 
   if (type == "youtube-video"){
-    option = [{ name: "Highest"}, {name: "Lowest"}]
+    option = [{ name: "Alta", key:"highest"}, {name: "Baixa", key:"lowest"}]
   }
   const [selectedOption, setSelectedOption] = useState(option[0])
 
   function Download(){
     if (type == "youtube-video") {
-      const callApi = `${origin}/api/youtube-video-download/?url=${url}&quality=${selectedOption.name}`
+      const callApi = `${origin}/api/youtube-video-download/?url=${url}&quality=${selectedOption.key}`
       location.assign(callApi) // download video
-      runToast("Download is starting at seconds...")
+      runToast("O Download já vai começar")
     }
 
     RotateButton(rotate, setRotate)
@@ -50,7 +50,7 @@ export function Donwloader(props:DownloadProps){
       <div className="sm:w-[550px] p-4 w-[calc(100vw_-_50px)] bg-marine-500 rounded">
         <div className="text-marine-100 py-4 flex h-8 items-center justify-between">
           <h2 className="text-md font-medium">
-            Save Video
+            Baixe o Vídeo
           </h2>
           <div className="flex">
             <button onClick={ () => closeOrOpen() }>

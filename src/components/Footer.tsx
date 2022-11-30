@@ -8,7 +8,7 @@ export function Footer(){
       <div className="sm:w-[600px]">
         <div className="flex items-center justify-between py-1">
           <p >
-            Developed by "José Alexandro"
+            Feito por "José Alexsandro"
           </p>
           <span>
             <a>
