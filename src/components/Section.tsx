@@ -5,7 +5,7 @@ export function Section(){
     <section className="max-sm:flex w-full h-auto items-center justify-center py-8 flex-wrap">
       <article className="px-4 py-1 block">
         <h2 className="sm:text-center text-marine-500 font-extrabold text-xl">
-          Para quer serve?
+          O que é <strong>Saing</strong> ?
         </h2>
         <p className="sm:m-auto sm:w-[600px] text-marine-500 opacity-95 py-2">
           Ferramentas como YouTube e Instagram não disponibilizam uma forma de baixar vídeos, fotos e outros conteúdos que a plataforma hospeda, o “Saing” te dá uma forma rápida e prática de fazer isso.

@@ -6,6 +6,7 @@ import { Menu } from "../components/Menu";
 import { Section } from "../components/Section";
 import { Footer } from "../components/Footer";
 import { DownlaodType, DownloadContext } from "../hooks/useDownlaod";
+import { Informations } from "../components/Informations";
 
 
 const downloadType:DownlaodType = {
@@ -25,6 +26,7 @@ export default function YoutubeVideoDonwload(){
         <main className="w-full h-auto  bg-gray-100">
           <Form/>
           <Section />
+          <Informations />
         </main>
         <Footer/>
       </Fragment>
