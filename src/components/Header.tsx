@@ -4,7 +4,7 @@ export function Header(){
   const { set: MenuFunction } = useMenuInfo()
 
   return (
-    <header className="w-full h-24 flex items-center justify-center bg-marine-600">
+    <header className="max-sm:justify-between w-full h-24 flex items-center justify-center bg-marine-600">
       <div className="max-sm:hidden w-[600px] flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-slate-100">
@@ -29,6 +29,12 @@ export function Header(){
       </div>
 
       {/* 44 center */}
+
+      <div className="sm:hidden px-3 text-slate-100 font-medium text-2xl">
+        <p>
+          SAING.NET
+        </p>
+      </div>
 
       <div onClick={ MenuFunction } className="sm:hidden">
         <button aria-label="Abri o menu" className="w-24 h-24 flex flex-col gap-3 items-center justify-center">

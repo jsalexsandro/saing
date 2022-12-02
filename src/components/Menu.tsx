@@ -6,7 +6,7 @@ export function Menu(){
   if (!isOpen) return null
 
   return (
-    <menu className="sm:hidden bg-marine-500 border-b-2 border-marine-600">
+    <menu className="sm:hidden bg-marine-600 shadow-md">
       <div>
         <ul className="text-lg text-slate-100">
           <li className="px-4 py-1">
