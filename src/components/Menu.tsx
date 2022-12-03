@@ -16,7 +16,7 @@ export function Menu(){
             <a href="#" className="hover:text-slate-300 transition-colors">Github</a>
           </li>
           <li className="px-4 py-1">
-            <a href="#" className="hover:text-slate-300 transition-colors">Como usar</a>
+            <a href="#" className="hover:text-slate-300 transition-colors">Tutorial</a>
           </li>
         </ul>
       </div>

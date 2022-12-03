@@ -1,5 +1,6 @@
 import { useDownload } from "./useDownlaod";
 import YoutubeVideoText from "../text/youtube-video-text"
+import YoutubeMusicText from "../text/youtube-music-text"
 
 type IuseInfo = {
   title: string;
@@ -13,5 +14,9 @@ export function useInfo():IuseInfo {
 
   if (type == "youtube-video"){
     return YoutubeVideoText(type)
+  }
+
+  if (type == "youtube-music"){
+    return YoutubeMusicText(type)
   }
 }

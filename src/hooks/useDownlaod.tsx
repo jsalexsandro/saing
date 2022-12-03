@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 export type DownlaodType = {
-  type:"youtube-video" | "youtube-thumbnail";
+  type:"youtube-video" | "youtube-thumbnail" | "youtube-music";
   downloadType:string,
   title:string;
 }

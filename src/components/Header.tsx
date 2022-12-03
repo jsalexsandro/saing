@@ -21,7 +21,7 @@ export function Header(){
                 <a href="#">GITHUB</a>
               </li>
               <li className="hover:text-slate-300">
-                <a href="#">COMO USAR</a>
+                <a href="#">TUTORIAL</a>
               </li>
             </ul>
           </nav>

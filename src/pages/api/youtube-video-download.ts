@@ -8,6 +8,7 @@ export default async function YoutubeVideoDownload(req:NextApiRequest, res:NextA
   if (!url)  {
     return res.status(400).json({ error:"url not found" })
   }
+
   if (!(quality == "lowest" || quality == "highest")) {
     return res.status(400).json({ error:"quality not found" })
   }
@@ -16,7 +17,10 @@ export default async function YoutubeVideoDownload(req:NextApiRequest, res:NextA
 
   const infos = await getInfo(url)
   const author = infos.videoDetails.author.name
-  const filename = `${author}.mp4`.replaceAll(" ","-")
+  const title = infos.videoDetails.title
 
+  const filename = `[${author}] ${title}.mp4`.replaceAll(" ","-")
+
+  // console.log(`${process.env.API_DOWNLOAD}/youtube-video-download/?url=${url}&filename=${filename}&quality=${quality}`)
   res.status(200).redirect(`${process.env.API_DOWNLOAD}/youtube-video-download/?url=${url}&filename=${filename}&quality=${quality}`)
 } 

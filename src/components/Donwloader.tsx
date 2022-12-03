@@ -23,9 +23,10 @@ export function Donwloader(props:DownloadProps){
 
   let option:Option[] = []
 
-  if (type == "youtube-video"){
+  if (type == "youtube-video" || type == "youtube-music"){
     option = [{ name: "Alta", key:"highest"}, {name: "Baixa", key:"lowest"}]
   }
+
   const [selectedOption, setSelectedOption] = useState(option[0])
 
   function Download(){
@@ -39,7 +40,7 @@ export function Donwloader(props:DownloadProps){
   }
 
   useEffect(() => {
-    if (type == "youtube-video") {
+    if (type == "youtube-video" || type == "youtube-music") {
       const data = GetThumbURL(url)
       setThumbnailUrl(data)
     }
@@ -50,7 +51,7 @@ export function Donwloader(props:DownloadProps){
       <div className="sm:w-[550px] p-4 w-[calc(100vw_-_50px)] bg-marine-500 rounded">
         <div className="text-zinc-100 py-4 flex h-8 items-center justify-between">
           <h2 className="text-md font-medium">
-            Baixe o Vídeo
+            Selecione a Qualidade
           </h2>
           <div className="flex">
             <button onClick={ () => closeOrOpen() }>
@@ -62,7 +63,7 @@ export function Donwloader(props:DownloadProps){
           <img  className="sm:w-[550px] w-[calc(100vw_-_50px)] rounded"  src={thumbnailUrl} alt=""/>
         </div>
         <div>
-          <p className="text-zinc-100 py-2">Qualidade:</p>
+          {/* <p className="text-zinc-100 py-2">Qualidade:</p> */}
           <ListBox option={option} selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
         </div>
         <div>
