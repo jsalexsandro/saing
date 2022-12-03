@@ -23,7 +23,7 @@ export default function Index(){
     <DownloadContext.Provider value={ downloadType }>
       <Fragment>
         <Head>
-          <meta name={ YoutubeVideoMetaDesc }  />
+          <meta name="description" content={ YoutubeVideoMetaDesc }  />
           <title>{ SiteTitle }</title>
         </Head>
         <MenuInfoProvider>
