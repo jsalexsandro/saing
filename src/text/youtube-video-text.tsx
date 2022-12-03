@@ -6,3 +6,5 @@ export default (type: string) =>  {
     link:`/tutorial?type=${type}`
   }
 }
+
+export const YoutubeVideoMetaDesc = `Baixe Vídeo do Youtube de forma Rapida e Pratica, Com Saing voçê baixar seus videos em segundos!`

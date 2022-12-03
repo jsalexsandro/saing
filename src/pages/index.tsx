@@ -7,7 +7,8 @@ import { Section } from "../components/Section";
 import { Footer } from "../components/Footer";
 import { DownlaodType, DownloadContext } from "../hooks/useDownlaod";
 import { Informations } from "../components/Informations";
-
+import { YoutubeVideoMetaDesc } from "../text/youtube-video-text";
+import Head from "next/head"
 
 const downloadType:DownlaodType = {
   type: "youtube-video",
@@ -15,10 +16,16 @@ const downloadType:DownlaodType = {
   title:"Youtube"
 }
 
+const SiteTitle = "Saing | Baixar Vídeos do Youtube"
+
 export default function Index(){
   return (
     <DownloadContext.Provider value={ downloadType }>
       <Fragment>
+        <Head>
+          <meta name={ YoutubeVideoMetaDesc }  />
+          <title>{ SiteTitle }</title>
+        </Head>
         <MenuInfoProvider>
           <Header/>
           <Menu/>

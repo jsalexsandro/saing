@@ -6,3 +6,5 @@ export default (type: string) =>  {
     link:`/tutorial?type=${type}`
   }
 }
+
+export const YoutubeMusicMetaDesc = `Baixe Musicas do Youtube de forma Rapida e Pratica`
