@@ -11,7 +11,7 @@ export function Footer(){
             Feito por "José Alexsandro"
           </p>
           <span>
-            <a>
+            <a href="#">
               <GitFork size={ 32 }/>
             </a>
           </span>

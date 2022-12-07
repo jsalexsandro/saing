@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getInfo } from "ytdl-core";
+import ytdl, { getInfo } from "ytdl-core";
 
 export default async function YoutubeVideoDownload(req:NextApiRequest, res:NextApiResponse){
   const url = req.query.url as string;
@@ -20,7 +20,18 @@ export default async function YoutubeVideoDownload(req:NextApiRequest, res:NextA
   const title = infos.videoDetails.title
 
   const filename = `[${author}] ${title}.mp4`.replaceAll(" ","-")
+  res.writeHead(200, {
+      'Content-Disposition':`attachment; filename="${filename}`,
+      'Content-Transfer-Encoding': 'binary',
+      'Content-Type': 'application/octet-stream'
+  });
 
-  // console.log(`${process.env.API_DOWNLOAD}/youtube-video-download/?url=${url}&filename=${filename}&quality=${quality}`)
-  res.status(200).redirect(`${process.env.API_DOWNLOAD}/youtube-video-download/?url=${url}&filename=${filename}&quality=${quality}`)
+  await ytdl(url, { quality:quality }).pipe(res)
+  // res.status(200).redirect(`${process.env.API_DOWNLOAD}/youtube-video-download/?url=${url}&filename=${filename}&quality=${quality}`)
 } 
+
+export const config = {
+  api: {
+    responseLimit: false,
+  },
+}

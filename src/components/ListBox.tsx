@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Listbox } from '@headlessui/react'
 import { Option } from '../types/Option';
 
-
 interface ListBoxProps {
   option: Option[];
   selectedOption:Option;
